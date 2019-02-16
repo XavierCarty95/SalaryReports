@@ -1,0 +1,22 @@
+{
+  "name": "salaryreport",
+  "version": "1.0.0",
+  "description": "",
+  "main": "salaryreport.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XavierCarty95/SalaryReports.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/XavierCarty95/SalaryReports/issues"
+  },
+  "homepage": "https://github.com/XavierCarty95/SalaryReports#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3"
+  }
+}
