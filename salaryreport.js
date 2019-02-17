@@ -10,19 +10,26 @@ const bodyparser = require("body-parser")
 
 
 var text = fs.readFileSync("load_dept_emp.txt", "utf8")
+var open = ""
 var textByLine = text.split("\n")
-//  console.log(textByLine)
+for (var i =0; i < 10; i++){
+    open += "[" +textByLine[i]+  " ] " + "\n"
+    
+}
+console.log(open)
+
+
  
- 
- 
- for (var i = 0; i < 10;  i++){
-     var len = textByLine[i]
-     console.log(len)
- }
-     for(var j = 0; j < textByLine[i]; j++){
-         console.log(len[j+1])
-         
-     }
+//  for (var i = 0; i < 10;  i++){
+//      var len = textByLine[i]
+//     console.log(len)
+// }
+
+// var open = []
+// for(var j = 0; j < len[i].length; j++) {
+//   var add = open.concat(len[i])
+//   console.log(add)
+// }
     
  
 
