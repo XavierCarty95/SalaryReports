@@ -37,3 +37,10 @@ for(var i = 0; i < 10; i++){
 }
 
 console.log(open3)
+
+var depar = ["d005" , "d007" , "d004" , "d004", "d003" , "d005", "d008" , "d005" ,  "d006" , "d004"];
+var employee = [ "Georgi" , "Bezalel" , "Parto" , "Chirstian" ,  "Kyoichi" , "Anneke", "Tzvetan", "Saniya", "Sumant", "Duangkaew"];
+
+
+
+console.log(`{depar}`)
