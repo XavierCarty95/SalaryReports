@@ -7,14 +7,15 @@ var employeeName = [ ["Ruth", "Sofía", "Elias", "Mathias", "Arnell"], ["Kai", "
 
 for (var i = 0; i < departmentId.length; i++) {
     console.log(`Department ${departmentId[i]} - ${departments[i]}:`);
-     for ( var j = 0; j < employeeName[i]; j++){
+
+         
+    for (var j=0; j < salaries[i].length; j++) {
+        console.log(` ${j+1}: Employee ID: ${employeeId[i][j]}, Name: ${employeeName[i][j]}, Salary: ${salaries[i][j]}` );
+      }
         //  console.log(`employee ${employeeName[i]} makes ${salaries[i]}`)
+        // for ( var j = 0; j < employeeName[i].length; j++){
+        //  console.log(`employee ${employeeName[i][j]} makes ${salaries[i][j]}`)
          
-     }
-  
-  for ( var j = 0; j < employeeName[i].length; j++){
-         console.log(`employee ${employeeName[i][j]} makes ${salaries[i][j]}`)
-         
-     }
 }
+
 
