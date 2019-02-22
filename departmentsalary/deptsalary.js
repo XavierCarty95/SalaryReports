@@ -26,6 +26,9 @@ fs.readFile( 'load_dept_names.txt', 'utf8', function(err,data){
         departments.push(deptDataArray[i].slice(9,-3));
         
         // populate multi-d arrays with empty sub-arrays (NO DATA!!!)
+        employeeId.push([]);
+        employeeName.push([])
+        salaries.push([]);
     }
       
          console.log(departmentId)
