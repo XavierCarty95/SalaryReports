@@ -31,11 +31,7 @@ fs.readFile( 'load_dept_names.txt', 'utf8', function(err,data){
         salaries.push([]);
     }
       
-         console.log(departmentId)
-         console.log(departments)
-         console.log(employeeId)
-         console.log(employeeName)
-         console.log(salaries)
+         
     
 })
 
@@ -45,15 +41,36 @@ fs.readFile( 'load_dept_emp.txt', 'utf8', function(err,data){
     if (err) throw err
     var employeeDataClean = data.replace(/INSERT INTO `dept_emp` VALUES/g, "")
     var employeeDataArray = employeeDataClean.split('\n')
-       for( var i = 0; i <employeeDataArray.length; i++){
+       for( var i = 0; i < employeeDataArray.length; i++){
         if(employeeDataArray[i].slice(28,32) == '9999'){
-            console.log(employeeDataArray[i].slice(8,12))
-            console.log(employeeDataArray[i].slice(1,6))
-            // employeeId[departmentId.indexOf(employeeDataArray[i].slice(7,11))].push(employeeDataArray.slice(2,6))
+            // console.log(employeeDataArray[i].slice(8,12))
+            // console.log(employeeDataArray[i].slice(1,6))
+            employeeId[departmentId.indexOf(employeeDataArray[i].slice(8,12))].push(employeeDataArray[i].slice(1,6))
           }
           
       }
     
     // console.log(employeeDataArray)
-    // console.log(employeeId)
+        //   console.log(employeeId)
 });
+
+fs.readFile("load_employee.txt" , "utf8" , function(err, data) {
+    if (err) throw err;
+    var employeeNameDataClean = data.replace(/INSERT INTO `employees` VALUES/g, "")
+    var employeeNameArray = employeeNameDataClean.split('\n')
+    for( var i = 0; i < employeeNameArray.length; i++){
+        
+            // console.log(employeeDataArray[i].slice(8,12))
+            // console.log(employeeDataArray[i].slice(1,6))
+        
+        employeeName[employeeName.push(employeeNameArray[i].slice(20,-18))]
+         
+    }
+
+        
+      
+    
+    console.log(employeeName)
+    
+})
+
