@@ -89,7 +89,7 @@ fs.readFile("load_salaries1.txt", "utf8", function(err, data) {
                            
                             console.log(employeeId[j][k])
                              if(salaryDataArray[i].slice(1, 6) == employeeId[j][k]) {
-                              
+                              salaries[j][k] = salaryDataArray[i].slice(7, 12);
                               console.log( "*!!!  Match !!!!")    
                              }
 
@@ -99,7 +99,7 @@ fs.readFile("load_salaries1.txt", "utf8", function(err, data) {
                         
                     }
                      
-                     console.log(salaryDataArray[i].slice(1,6))
+                    //  console.log(salaryDataArray[i].slice(1,6))
 
                     
                 }
